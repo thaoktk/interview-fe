@@ -4,7 +4,7 @@ import { convertTime } from '../../../utils'
 
 const allMinutes = []
 
-for (let i = 1; i < 60; i++) {
+for (let i = 0; i < 60; i++) {
     allMinutes.push(i)
 }
 
