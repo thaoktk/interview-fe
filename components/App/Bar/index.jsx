@@ -9,7 +9,7 @@ for (let i = 1; i < 60; i++) {
 }
 
 function Bar({ hour, dataShift }) {
-    const renderShiftView = () => {
+    const renderStatus = () => {
         const hourShift = dataShift.filter(item => parseInt(item.hour) === hour)
         return allMinutes.map(minute => {
             const minuteShift = hourShift.find(item => parseInt(item.minute) === minute)
@@ -44,7 +44,7 @@ function Bar({ hour, dataShift }) {
     }
     return (
         <div className='w-full flex flex-wrap lg:flex-nowrap items-center'>
-            {renderShiftView()}
+            {renderStatus()}
         </div>
     )
 }
