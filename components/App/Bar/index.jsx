@@ -16,27 +16,27 @@ function Bar({ hour, dataShift }) {
             if (!minuteShift) {
                 return (<div
                     key={v4()}
-                    className='w-[20px] lg:w-full h-[50px] border-2 bg-gray tooltip'>
-                    <span className="tooltip-text">{convertTime(hour, minute)} Máy không hoạt động</span>
+                    className='w-[20px] lg:w-full h-[50px] border bg-gray tooltip'>
+                    <span className="tooltip-text">{convertTime(hour, minute)} - Máy không hoạt động</span>
                 </div>)
             } else {
                 if (minuteShift.downTimeType === 0) {
                     return (<div
                         key={v4()}
-                        className='w-[20px] lg:w-full h-[50px] border-2 bg-green tooltip'>
-                        <span className="tooltip-text">{convertTime(hour, minute)} Máy chạy bình thường</span>
+                        className='w-[20px] lg:w-full h-[50px] border bg-green tooltip'>
+                        <span className="tooltip-text">{convertTime(hour, minute)} - Máy chạy bình thường</span>
                     </div>)
                 } else if (minuteShift.downTimeType >= 1 && minuteShift.downTimeType <= 19) {
                     return (<div
                         key={v4()}
-                        className='w-[20px] lg:w-full h-[50px] border-2 bg-red tooltip'>
-                        <span className="tooltip-text">{convertTime(hour, minute)} Máy dừng không kế hoạch</span>
+                        className='w-[20px] lg:w-full h-[50px] border bg-red tooltip'>
+                        <span className="tooltip-text">{convertTime(hour, minute)} - Máy dừng không kế hoạch</span>
                     </div>)
-                } else if (minuteShift.downTimeType > 20) {
+                } else if (minuteShift.downTimeType >= 20) {
                     return (<div
                         key={v4()}
-                        className='w-[20px] lg:w-full h-[50px] border-2 bg-yellow tooltip'>
-                        <span className="tooltip-text">{convertTime(hour, minute)} Máy dừng có kế hoạch</span>
+                        className='w-[20px] lg:w-full h-[50px] border bg-yellow tooltip'>
+                        <span className="tooltip-text">{convertTime(hour, minute)} - Máy dừng có kế hoạch</span>
                     </div>)
                 }
             }
