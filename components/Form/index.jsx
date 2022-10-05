@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 } from "uuid";
-import { shifts } from "../../../data";
-import useShiftActiveStore from "../../../store/shiftActiveStore";
+import { shifts } from "../../data";
+import useShiftActiveStore from "../../store/shiftActiveStore";
 
 function Form() {
   const { shiftActive, setShiftActive } = useShiftActiveStore()

@@ -1,6 +1,6 @@
 import React from 'react'
 import { v4 } from 'uuid'
-import { convertTime } from '../../../utils'
+import { convertTime } from '../../utils'
 
 const allMinutes = []
 
