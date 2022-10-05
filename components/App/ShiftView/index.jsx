@@ -1,10 +1,10 @@
-
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 import { machineDataForShiftA, machineDataForShiftB, shifts } from "../../../data";
 import useShiftActiveStore from "../../../store/shiftActiveStore";
 import { getAllHourShift } from "../../../utils";
-import Bar from "../Bar";
+const Bar = dynamic(() => import("../Bar"));
 
 function ShiftView() {
   const [dataShiftActive, setDataShiftActive] = useState(machineDataForShiftA)

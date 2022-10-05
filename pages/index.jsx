@@ -1,13 +1,9 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-const Form = dynamic(() => import("../components/App/Form"), {
-  ssr: false,
-});
+const Form = dynamic(() => import("../components/App/Form"));
 
-const ShiftView = dynamic(() => import("../components/App/ShiftView"), {
-  ssr: false,
-});
+const ShiftView = dynamic(() => import("../components/App/ShiftView"));
 
 export default function Home() {
   return (

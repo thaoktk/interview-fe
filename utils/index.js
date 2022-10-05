@@ -20,7 +20,7 @@ const getAllHourShift = (shifts, shiftActive) => {
   const hours = [];
 
   for (let i = hourShift.hourFrom; i <= hourShift.hourTo; i++) {
-    if (i <= 24) {
+    if (i < 24) {
       hours.push(i);
     } else {
       hours.push(i - 24);
